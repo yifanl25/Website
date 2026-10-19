@@ -1,0 +1,46 @@
+/* Small overrides and responsive behavior for the static portfolio. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+[role="button"].w-nav-button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  .w-nav[data-collapse="medium"] .w-nav-menu.is-open {
+    display: flex !important;
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    right: 1rem;
+    left: auto;
+    float: none;
+    min-width: 13rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 10%);
+    text-align: left;
+  }
+
+  .w-nav[data-collapse="medium"] .w-nav-menu.is-open .w-nav-link {
+    display: block;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
