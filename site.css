@@ -96,7 +96,8 @@ body {
 }
 
 .work-section.work-dark .play-project-image-frame img.hackathon {
-  transform: scale(0.75);
+  transform: scale(0.5);
+  background: transparent;
 }
 
 [role="button"].w-nav-button {
