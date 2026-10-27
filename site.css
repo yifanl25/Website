@@ -89,9 +89,14 @@ body {
   object-position: center;
 }
 
-/* The Hackathon GIF has dark side gutters baked into its portrait frames. */
+.work-section.work-dark .play-project-image-frame img.hackathon,
+.work-section.work-dark .play-project-image-frame img.atari-frame {
+  object-fit: contain;
+  object-position: center;
+}
+
 .work-section.work-dark .play-project-image-frame img.hackathon {
-  transform: scale(1.12);
+  transform: none;
 }
 
 [role="button"].w-nav-button {
