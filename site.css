@@ -102,9 +102,8 @@ body {
 }
 
 .work-section.work-dark .play-project-image-frame.hackathon-frame {
-  width: min(100%, 240px);
+  width: 100%;
   aspect-ratio: 468 / 966;
-  justify-self: center;
 }
 
 [role="button"].w-nav-button {
