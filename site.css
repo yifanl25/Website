@@ -97,7 +97,7 @@ body {
 
 .work-section.work-dark .play-project-image-frame img.hackathon {
   object-fit: cover;
-  transform: scale(1.04);
+  transform: scale(1.12);
   background: transparent;
 }
 
