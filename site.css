@@ -397,6 +397,131 @@ body {
   }
 }
 
+/* Phone readability: fluid text widths and a calmer type scale. Desktop is untouched. */
+@media screen and (max-width: 767px) {
+  /* Home project titles: always left-aligned, like the tags and text under them. */
+  .project-card-title > [class*="heading-"] {
+    text-align: left;
+  }
+
+  /* Play cards: left-aligned text block with tags in a wrapping row. */
+  .project-card-dark .frame-83,
+  .project-card-dark .frame-84 {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .project-card-dark .frame-85 {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  /* Footer links: comfortable tap targets. */
+  .lets-talk-link,
+  .email-link,
+  .linkedin-link {
+    min-height: 44px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-1,
+  .heading-3,
+  .paragraph-work {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .heading-1 {
+    display: block;
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .heading-1.responsove {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .heading-2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .heading-3,
+  .heading-3-dj {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .paragraph-work {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .quotes-2 {
+    font-size: 22px;
+    line-height: 1.45;
+  }
+
+  .dj-c-heading {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .text-31 {
+    max-width: 100%;
+    font-size: 36px;
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+
+  /* Case study intro column: use the full width, aligned with the body text. */
+  .project-summary .column,
+  .project-summary .column-16 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* About intro */
+  .column-23 {
+    padding-right: 0;
+  }
+
+  .heading-1 .quotes {
+    display: block;
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .column-23 .heading-3,
+  .text-block-4 {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  /* About interests list: one left-aligned column inside the page gutter. */
+  .cta_component {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .cta_link-text {
+    font-size: clamp(1.75rem, 8.5vw, 2.25rem);
+  }
+
+  /* !important beats the per-item #w-node justify-self: end rules. */
+  .cta_component > a {
+    justify-self: start !important;
+    margin-left: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
