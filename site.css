@@ -71,12 +71,6 @@ body {
   min-width: 0;
 }
 
-.work-section.work-dark .project-card-dark > .play-project-image-link {
-  display: block;
-  width: 100%;
-  min-width: 0;
-}
-
 .work-section.work-dark .project-card-dark {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
