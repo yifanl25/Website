@@ -53,17 +53,16 @@ body {
   object-fit: cover;
 }
 
-/* Keep Play project artwork in the same 600 × 380 frame as the museum project. */
-.work-section.work-dark .project-card-dark > img {
-  display: block;
+/* Keep all Play artwork in a fixed 600 × 380 frame, regardless of source ratio. */
+.work-section.work-dark .play-project-image-frame {
   flex: 0 1 600px;
   width: min(100%, 600px);
-  height: auto;
+  max-width: 100%;
   aspect-ratio: 30 / 19;
-  object-fit: contain;
-  object-position: center;
+  overflow: hidden;
   border-radius: 20px;
   background: #111;
+  box-shadow: 0 0 10px 5px #00000063;
 }
 
 .work-section.work-dark .project-card-dark > .link-block-work {
@@ -72,15 +71,12 @@ body {
   min-width: 0;
 }
 
-.work-section.work-dark .project-card-dark > .link-block-work img {
+.work-section.work-dark .play-project-image-frame img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 30 / 19;
+  height: 100%;
   object-fit: contain;
   object-position: center;
-  border-radius: 20px;
-  background: #111;
 }
 
 [role="button"].w-nav-button {
@@ -137,7 +133,7 @@ body {
     align-self: stretch;
   }
 
-  .work-section.work-dark .project-card-dark > img,
+  .work-section.work-dark .play-project-image-frame,
   .work-section.work-dark .project-card-dark > .link-block-work {
     flex: 0 1 auto;
     width: 100%;
