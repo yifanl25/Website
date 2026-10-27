@@ -104,6 +104,26 @@ body {
   object-position: center;
 }
 
+/* About page nav: mirror the Work/Play nav (35px logo, 170px pill, 164px right slot)
+   so its Work button sits exactly where the Work/Play toggle does. */
+.navbar-content-5 > .logo-link {
+  width: 35px;
+}
+
+.navbar-content-5 .about-me-logo {
+  object-fit: contain;
+}
+
+.navbar-content-5 > .link-block-4 {
+  margin-right: 0;
+}
+
+.navbar-content-5::after {
+  content: "";
+  width: 164px;
+  height: 60px;
+}
+
 [role="button"].w-nav-button {
   cursor: pointer;
 }
@@ -269,7 +289,8 @@ body {
 
 @media screen and (max-width: 479px) {
   .navbarcontainer-3,
-  .navbarcontainer-4 {
+  .navbarcontainer-4,
+  .navbarcontainer-6 {
     position: relative;
     width: 100%;
     min-height: 76px;
@@ -284,6 +305,10 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     gap: 1.25rem;
+  }
+
+  .navbar-content-5::after {
+    height: 0;
   }
 
   .navbar-content-3 > a,
